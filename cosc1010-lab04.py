@@ -92,21 +92,18 @@ min_temps = [
     17, 28, 23, 25, 23, 23, -3, -15, 19, 5,
     -1, -1, 11, 13
 ]
-max_sum= 0
-for maxtemp in max_temps:
-    total_max= max_sum + maxtemp
-print(total_max)
+sum_max= 0
+sum_min= 0
+for i in range(len(max_temps)):
+    sum_max+= max_temps[i]
+    sum_min+= min_temps[i]
+print(f"Sum of the maximum temperatures is:",(sum_max))
+print(f"Sum of the minimum temperatures is:",(sum_min))
 
-min_sum= 0
-for mintemp in min_temps:
-    total_min= min_sum + mintemp
-print(total_min)
-
-for i in  range (len(max_temps)):
-    average_max= total_max/len(max_temps) if max_temps else 0
-    average_min= total_min/len(min_temps) if min_temps else 0
-print(average_max)   
-print(average_min)
+average_max= sum_max/len(max_temps) 
+average_min= sum_min/len(min_temps) 
+print(f"The average of maximum temperatures is:", (average_max))   
+print(f"The average of minimum temperatures is:", (average_min))
 
 # The above two lists are datasets for the maximum and minimum temperatures for Laramie in 2023.
 # Each of these lists has the same length, indicating that they both have the same index positions.
@@ -118,6 +115,6 @@ print(average_min)
 # HINT: You can find this information without using any logic or looping.
 highest= max(max_temps)
 lowest= min(min_temps)
-print(highest)
-print(lowest)
+print(f"The highest temperature is:", (highest))
+print(f"The lowest temperature is:", (lowest))
 
