@@ -1,0 +1,11 @@
+items= [Apples, Milk, Bread, Chips, Eggs]
+prices= [5, 4, 3, 2, 2.5]
+# I bought eggs for $3
+for i in range(len(items)):
+    print(f"I bought {items[i]} for ${prices[i]}")
+#I spent $total at Walmart
+spending= 0
+for s in prices;
+    spending= spending + s
+
+

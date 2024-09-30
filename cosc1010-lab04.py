@@ -92,14 +92,19 @@ min_temps = [
     17, 28, 23, 25, 23, 23, -3, -15, 19, 5,
     -1, -1, 11, 13
 ]
-sum_max= sum(max_temps)
-sum_min= sum(min_temps)
+max_sum= 0
+for maxtemp in max_temps:
+    total_max= max_sum + maxtemp
+print(total_max)
+
+min_sum= 0
+for mintemp in min_temps:
+    total_min= min_sum + mintemp
+print(total_min)
 
 for i in  range (len(max_temps)):
-    sum_max += max_temps[i]
-    sum_min += min_temps[i]
-average_max= sum_max/len(max_temps) if max_temps else 0
-average_min= sum_min/len(min_temps) if min_temps else 0
+    average_max= total_max/len(max_temps) if max_temps else 0
+    average_min= total_min/len(min_temps) if min_temps else 0
 print(average_max)   
 print(average_min)
 
